@@ -71,17 +71,22 @@ Adicione:
 <%= render 'comments/form' %>
 {% endhighlight %}
 
-Em `app/controllers/ideas_controller.rb` adicione a *action* **show** abaixo da linha seguinte:
+Em `app/controllers/ideas_controller.rb`, no final do arquivo, você encontrará o método `set_idea`:
 
 {% highlight ruby %}
-@idea = Idea.find(params[:id])
+def set_idea
+  @idea = Idea.find(params[:id])
+end
 {% endhighlight %}
 
-Adicione:
+Modifique-o para:
 
 {% highlight ruby %}
-@comments = @idea.comments.all
-@comment = @idea.comments.build
+def set_idea
+  @idea = Idea.find(params[:id])
+  @comments = @idea.comments.all
+  @comment = @idea.comments.build
+end
 {% endhighlight %}
 
 Abra `app/views/comments/_form.html.erb` e após:
