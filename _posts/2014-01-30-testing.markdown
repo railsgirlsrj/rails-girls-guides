@@ -1,57 +1,57 @@
 ---
 layout: default
-title: You better check you app, before you wreck your app
+title: É melhor verificar seu app, antes que você o quebre
 permalink: testing-rspec
 ---
 
-# Test your app with RSpec
+# Teste sua aplicação com RSpec
 
-*Created by Clemens Helm, [@clemenshelm](https://twitter.com/clemenshelm) and Floor Drees, [@floordrees](https://twitter.com/floordrees)* 
+*Criado por Clemens Helm, [@clemenshelm](https://twitter.com/clemenshelm) e Floor Drees, [@floordrees](https://twitter.com/floordrees)*
 
-RSpec is a Ruby testing framework, that describes our application's behavior in a syntax that doesn't look much like Ruby. It outputs test results in your terminal, so you'll test your reading skills as well (pun intended).
+RSpec é um framework de testes de Ruby que descreve o comportamento da sua aplicação em uma sintaxe que não se parece muito com a de Ruby. Exibe os resultados do teste no seu terminal para que você também teste suas habilidades de leitura.(trocadinho intencional).
 
-__COACH__: Talk about testing and Behavior-Driven Development.
+__COACH__: Fale sobre testes e Behavior-Driven Development.
 
-### Install rspec
+### Instale o Rspec
 
-For starters, let's install RSpec and all of its dependencies. 
+Para começar, vamos instalar o RSpec e todas as suas dependências.
 {% highlight sh %}
 gem install rspec
 {% endhighlight %}
 
-Then we call
+E aí executamos
 {% highlight sh %}
 rspec --init
 {% endhighlight %}
 
-in our project directory. This creates `spec_helper.rb` in the spec folder, and `.rspec`.
+no diretório do nosso projeto. Isso cria o arquivo `spec_helper.rb` na pasta spec e o arquivo de configuração `.rspec` .
 
-Rubyists often use the words 'test' and 'specification' interchangeably, that's why you'll store your tests in the 'specs' folder. Save your test as `idea_spec.rb` (`<name_of_spec>_spec.rb`).
+Rubistas costumam usar os termos 'teste' e 'especificação' como sinônimos e é por essa razão que você armazenarám seu testes na pasta 'spec'. Salve o seu teste como `idea_spec.rb` (`<name_of_spec>_spec.rb`).
 
-Inside that new file, write:
-  
+Dentro do novo arquivo, escreva:
+
 {% highlight ruby %}
 require "spec_helper"
 require "idea"
 {% endhighlight %}
 
-Next, let's describe one of our specifications
+Em seguida, vamos escrever uma das nossas especificações
 {% highlight ruby %}
 describe Idea do
   it "has a title" # your examples (tests) go here
 end
 {% endhighlight %}
 
-In your terminal run
+No seu terminal, execute
 {% highlight sh %}
 rspec spec/lib/idea_spec.rb
 {% endhighlight %}
 
-which will output that your test is pending as it's not yet implemented. 
+que irá retornar que seu teste está pendente já que este ainda não foi implementado.
 
-__COACH__: Talk about googling terminal output.
+__COACH__: Fale sobre como pesquisar saídas do terminal
 
-Let's do something about that!
+Vamos fazer algo a respeito então!
 {% highlight ruby %}
 describe Idea do
   it "has a title" do # yep, you can totally use 'it'
@@ -61,11 +61,11 @@ describe Idea do
 end
 {% endhighlight %}
 
-should give you a more satisfying output.
+Isso deve mostrar um resultado mais satisfatório.
 
-####Refactoring
+#### Refatoração
 
-You could actually also write:  
+Você também pode escrever  
 
 {% highlight ruby %}
 describe Idea do
@@ -73,46 +73,49 @@ describe Idea do
 end
 {% endhighlight %}
 
-which looks a lot nicer, but there's a lot of magic involved. For now it's probably jyst nice to know that we can 'refactor' those big chuncks of code into smaller bits with a little more experience.  
 
-__COACH__: Talk a bit about refactoring.  
+que tem a aparência bem melhor do que o exemplo anterior, mas ainda existe muita magia envolvida nesse código.
 
-#### Marking to-do's with tests
+Por enquanto é interessante saber que nós podemos 'refatorar' aqueles longos trechos de código em partes menores adquirindo pouco de mais experiência.
 
-Yeah! To-do lists. Awesome. A nifty RSpec feature is the functionality to mark certain tests as pending. 
+__COACH__: Fale um pouco mais sobre refatoração  
 
-Leaving out the `do` and the `end` in the example body, like so
+#### Marcando os testes pendentes
+
+Uhu! Uma funcionalidade marota do RSpec é a habilidade de se marcar certos testes como pendentes.
+
+Ao se retirar o `do` e `end` do código do exemplo, da seguinte forma
 
 {% highlight ruby %}
 it "has a title"
 {% endhighlight %}
 
-will mark a test as pending. For bigger applications, where you want to tackle one test at a time, you can also add an `x` in front of an example, making it read 
+você marcará um teste como pendente. Para aplicações maiores, onde você quer atacar um teste por vez, você também pode adicionar a letra `x` no começo do teste:
 {% highlight ruby %}
 describe Idea do  
   xit "has a title" do
 end
 {% endhighlight %}
 
-or use the word `pending` in your example.
+ou usando o termo `pending` no seu teste.
 
 ### Behavior-Driven Development
 
-Normally we would go about BDD testing in a slightly different way. Thinking about the application we want to build, we'll write down our expectations and then start building step by step, with the specifications in mind. 
+Normalmente escrevemos esse tipo de teste de uma maneira um pouco diferente. Pensando na aplicação que queremos construir, vamos escrever nossas expectativas e então começar a construir os testes passo a passo, com as especificações em mente.
 
-We'd first write 
+Primeiramente vamos escrever
 
 {% highlight ruby %}
 describe Idea do
   it "has a title"
-    idea = Idea.new 
-    idea.title.should be_true 
+    idea = Idea.new
+    idea.title.should be_true
     # or, alternatively: idea.title.should == true
   end
 end
 {% endhighlight %}
 
-and only then create a file named `idea.rb` introducing the idea class
+e aí então criar um arquivo chamado `idea.rb` relativo à classe *Idea*.
 
 {% highlight ruby %}
 class Idea
@@ -120,9 +123,9 @@ attr_accessor  :title
 end
 {% endhighlight %}
 
-as running `rspec spec/lib/idea_spec.rb` in your terminal before you've implemented that class will throw you an error. Luckely, errors are nothing to be afraid of. RSpec errors actually help you write (the necessary) code! 
+Se você executar o comando `rspec spec/lib/idea_spec.rb` no seu terminal, vai ocorrer um erro. Você não deve sentir medo de erros, eles são nossos amigos. :) Os erros do RSpec vão te ajudar a escrever o código necessário para implementar os testes!
 
-Try and write tests for the follow up guides to check if you're implementing ALL the right things. 
+Tente escrever testes para os demais items desse tutorial para verificar se você está conseguindo implementar as coisas de maneira correta.
 
 {% highlight ruby %}
 describe Attendee do
@@ -130,6 +133,6 @@ describe Attendee do
 end
 {% endhighlight %}
 
-Just saying.
+Só um toque.
 
-Happy testing!
+Seja feliz testando!
