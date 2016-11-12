@@ -1,77 +1,79 @@
 ---
 layout: default
-title: Commenting functionality for the Rails Girls app
-permalink: commenting
+title: Permita Comentários no seu App
+permalink: adicione-comentarios
 ---
-# Commenting for Rails Girls App
-*Created by Janika Liiv, [@janikaliiv](https://twitter.com/janikaliiv)*
+# Permita Comentários no seu App
+*Criado por Janika Liiv, [@janikaliiv](https://twitter.com/janikaliiv)*
 
-We are going to add the possibility to comment on ideas in your *railsgirls* application.
+Nós vamos adicionar a possibilidade de comentar em idéias na sua aplicação.
 
-The instructions for installing rails and building the ideas app can be found [here](/app).
+## *1.*Crie o scaffold para Comentários
 
-## *1.*Create comment scaffold
+Crie um scaffold para Comentários, com o nome de quem está comentando, o corpo (body) do comentário e com a referência para a tabela de idéias. (`idea_id`).
 
-Create a comment scaffold, with the commentator name, the comment body (contents of the comment) and with the reference to the ideas table (`idea_id`).
 {% highlight sh %}
 rails g scaffold comment user_name:string body:text idea_id:integer
 {% endhighlight %}
-This will create a migration file that lets your database know about the new comments table. Run the migrations using
+
+Isso vai criar um arquivo de migração que avisa ao seu banco de dados sobre a nova tabela de comentários. Rode a migração usando:
+
 {% highlight sh %}
 rake db:migrate
 {% endhighlight %}
 
-## *2.*Add relations to models
+## *2.*Adicione relationamentos aos modelos
 
-You need to make sure that Rails knows the relation between objects (ideas and comments).
-As one idea can have many comments we need to make sure the idea model knows that.
-Open app/models/idea.rb and after the row
+Você precisa ter certeza de que o Rails conhece o relationamento entre os objetos (idéias e comentários).
+Como uma idéia pode ter muitos comentários nós temos que ter certeza de que o modelo de Idéias (idea), sabe disso isso.
+
+Abre o arquivo app/models/idea.rb e depois da linha
 {% highlight ruby %}
 class Idea < ActiveRecord::Base
 {% endhighlight %}
-add
+adicione
 {% highlight ruby %}
 has_many :comments
 {% endhighlight %}
 
-The comment also has to know that it belongs to an idea. So open `app/models/comment.rb` and after
+O comentário também precisa saber que pertence a uma Idéia. Então abra o arquivo `app/models/comment.rb` e depois da linha
 {% highlight ruby %}
 class Comment < ActiveRecord::Base
 {% endhighlight %}
 
-add the row
+adicione a linha
 {% highlight ruby %}
 belongs_to :idea
 {% endhighlight %}
 
-## *3.*Render the comment form and existing comments
+## *3.*Renderize o formulário de comentários e os formulários existentes
 
-Open app/views/ideas/show.html.erb and after the image_tag
+Abra o arquivo app/views/ideas/show.html.erb e depois da image_tag
 {% highlight erb %}
 <%= image_tag(@idea.picture_url, :width => 600) if @idea.picture.present? %>
 {% endhighlight %}
 
-add
+adicione
 {% highlight erb %}
-<h3>Comments</h3>
+<h3>Comentários</h3>
 <% @comments.each do |comment| %>
   <div>
     <strong><%= comment.user_name %></strong>
     <br />
     <p><%= comment.body %></p>
-    <p><%= link_to 'Delete', comment_path(comment), method: :delete, data: { confirm: 'Are you sure?' } %></p>
+    <p><%= link_to 'Delete', comment_path(comment), method: :delete, data: { confirm: 'Você tem certeza?' } %></p>
   </div>
 <% end %>
 <%= render 'comments/form' %>
 {% endhighlight %}
 
-In `app/controllers/ideas_controller.rb` add to the show action
+Em `app/controllers/ideas_controller.rb` adicione na ação "show":
 {% highlight ruby %}
 @comments = @idea.comments.all
 @comment = @idea.comments.build
 {% endhighlight %}
 
-Open `app/views/comments/_form.html.erb` and after
+Abra o arquivo `app/views/comments/_form.html.erb` e depois do código
 {% highlight erb %}
   <div class="field">
     <%= f.label :body %><br />
@@ -79,12 +81,12 @@ Open `app/views/comments/_form.html.erb` and after
   </div>
 {% endhighlight %}
 
-add the row
+adicione a linha
 {% highlight erb %}
 <%= f.hidden_field :idea_id %>
 {% endhighlight %}
 
-next, remove
+então, remova
 {% highlight erb %}
 <div class="field">
   <%= f.label :idea_id %><br>
@@ -92,4 +94,4 @@ next, remove
 </div>
 {% endhighlight %}
 
-That's it. Now view an idea you have inserted to your application and there you should see the form for inserting a comment as well as deleting older comments.
+E é isso. Agora vamos ver uma Idéia que você inseriu na sua aplicação e lá você deve ver o formulário para inserir um comentário assim como para deletar comentários antigos.
