@@ -11,11 +11,11 @@ Para construir aplicativos e outras coisas com o Ruby on Rails, nós precisamos 
 
 Siga as instruções referentes ao seu sistema operacional. Se você encontrar algum problema no meio do caminho, não se preocupe! Fale com a gente e poderemos resolver juntas(os)!
 
-* [Instalação para OS X](#setup-for-os-x)
-* [Instalação para Windows](#setup-for-windows)
-* [Instalação para Linux](#setup-for-linux)
-* [Máquina virtual](#virtual-machine)
-* [Usando um serviço de nuvem](#using-a-cloud-service)
+* [Instalação para OS X](#instalao-para-os-x)
+* [Instalação para Windows](#instalao-para-windows)
+* [Instalação para Linux](#instalao-para-linux)
+* [Máquina virtual](#mquina-virtual)
+* [Usando um serviço de nuvem](#usando-um-servio-de-nuvem)
 
 <hr />
 
