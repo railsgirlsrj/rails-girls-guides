@@ -216,7 +216,7 @@ i.icon-text-editor, i.icon-prompt, i.icon-browser {
   line-height: 50px;
 }
 i.icon-text-editor {
-  background-image: url("/images/icon-text-editor.png");
+  background-image: url("../images/icon-text-editor.png");
 }
 
 i.icon-prompt{
