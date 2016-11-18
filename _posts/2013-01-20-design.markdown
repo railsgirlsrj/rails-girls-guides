@@ -1,7 +1,9 @@
 ---
-layout: default
+layout: page
 title: Aplicando um design moderno com o Bootstrap
 permalink: design
+previous-link: adicione-comentarios
+next-link: thumbnails
 ---
 
 # Aplicando um design moderno com o Bootstrap

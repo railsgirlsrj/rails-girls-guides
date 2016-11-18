@@ -1,10 +1,12 @@
 ---
-layout: default
+layout: page
 title: Design com HTML and CSS
 permalink: design-html-css
+previous-link: gravatar
+next-link: testing-rspec
 ---
 
-1.Design your header
+1.Design seu cabeçalho
 
 + Coloque o seguinte código no fim do arquivo `app/assets/stylesheets/application.css`:
 
@@ -37,7 +39,7 @@ permalink: design-html-css
 
  + Nós vamos usar o [Bootstrap](http://getbootstrap.com/) para
    Melhorar nossa tabela. Ache nessa linha no arquivo
-   `app/views/ideas/index.html.erb` e troque: 
+   `app/views/ideas/index.html.erb` e troque:
 
    `<table>`
 

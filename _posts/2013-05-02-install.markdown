@@ -1,7 +1,8 @@
 ---
-layout: default
+layout: page
 title: Guia de Instalação para o Rails Girls
 permalink: instalacao
+next-link: app
 ---
 
 # Guia de Instalação para o Rails Girls

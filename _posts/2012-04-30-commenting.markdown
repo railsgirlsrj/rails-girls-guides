@@ -1,7 +1,9 @@
 ---
-layout: default
+layout: page
 title: Permita Comentários no seu App
 permalink: adicione-comentarios
+previous-link: heroku
+next-link: design
 ---
 # Permita Comentários no seu App
 *Criado por Janika Liiv, [@janikaliiv](https://twitter.com/janikaliiv)*
