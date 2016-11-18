@@ -15,7 +15,7 @@ next-link: adicione-comentarios
 Siga os passos de "Introduction" e "Set up" do guia
 [Getting Started on Heroku with Ruby][heroku-guide] (em inglês, mas é tranquilo de seguir :D) para se cadasrar, instalar o Heroku CLI e logar.
 
-__COACH__: Fale sobre os benefícios de fazer deploy no Heroku ao invés de outro serviços tradicionais.
+**Treinadores**: Fale sobre os benefícios de fazer deploy no Heroku ao invés de outro serviços tradicionais.
 
 [heroku-guide]: https://devcenter.heroku.com/articles/getting-started-with-ruby#introduction
 
@@ -31,7 +31,7 @@ git add .
 git commit -m "Commit inicial"
 {% endhighlight %}
 
-__COACH__: É um bom momento pra falar de sistemas de controle de versão e git.
+**Treinadores**: É um bom momento pra falar de sistemas de controle de versão e git.
 
 #### Atualizando nosso banco de dados
 
@@ -54,13 +54,13 @@ end
 
 Rode `bundle install --without production` para instalar as novas dependências.
 
-__COACH__: Você pode falar sobre SGBDs aqui a diferença entre eles, e incluir alguns detalhes sobre a dependência do Heroku ser do PostgreSQL.
+**Treinadores**: Vocês pode falar sobre SGBDs aqui a diferença entre eles, e incluir alguns detalhes sobre a dependência do Heroku ser do PostgreSQL.
 
 ### Fazendo deploy da sua app
 
 #### Criando a app no Heroku
 
-Precisamos criar nossa aplicação Herku escrevendo `heroku create`` no Terminal.
+Precisamos criar nossa aplicação Herku escrevendo `heroku create` no Terminal.
 Vamos ver algo parecido com isso:
 `
 {% highlight sh %}

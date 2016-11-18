@@ -32,24 +32,24 @@ Agora, atualize a página em [http://localhost:3000/ideas](http://localhost:3000
 
 ## *2.*Melhore a navegação
 
-Considerando que uma "idéia" é a coisa mais importante na sua aplicação, nós vamos colocar o botão "Nova idéia" na barra de navegação para torná-lo sempre visível.
+Considerando que uma "ideia" é a coisa mais importante na sua aplicação, nós vamos colocar o botão "Nova ideia" na barra de navegação para torná-lo sempre visível.
 
 Abra `app/views/layouts/application.html.erb`, abaixo da linha
 
 {% highlight erb %}
-<li class="active"><a href="/ideas">Idéias</a></li>
+<li class="active"><a href="/ideas">Ideias</a></li>
 {% endhighlight %}
 
 adicione
 {% highlight erb %}
-<li ><%= link_to 'Nova Idéia', new_idea_path %></li>
+<li ><%= link_to 'Nova Ideia', new_idea_path %></li>
 {% endhighlight %}
 
 ## *3.*Melhore a lista de idéias
 
 Agora é hora de fazer a página de idéias se tornar profissional. Para isso, nós vamos substituir o layout de tabelas por divs.
 
-**Coach:** Fale um pouco sobre tabelas vs div.
+**Treinadores:** Falem um pouco sobre tabelas vs div.
 
 Abra `app/views/ideas/index.html.erb` no seu editor de texto e troque todas as linhas por:
 
@@ -100,7 +100,7 @@ Abra `app/views/ideas/show.html.erb` no seu editor e troque todas as linhas por:
 {% endhighlight %}
 
 
-**Coach:** Explique o novo código linha por linha.
+**Treinadores:** Expliquem o novo código linha por linha.
 
 ## E agora?
 
