@@ -1,7 +1,9 @@
 ---
-layout: default
+layout: page
 title: Criando thumbnails com Carrierwave
 permalink: thumbnails
+previous-link: design
+next-link: devise
 ---
 
 # Criando thumbnails com Carrierwave

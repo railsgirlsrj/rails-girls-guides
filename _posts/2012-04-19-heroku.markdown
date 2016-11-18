@@ -1,7 +1,9 @@
 ---
-layout: default
+layout: page
 title: Publicando no Heroku
 permalink: heroku
+previous-link: github
+next-link: adicione-comentarios
 ---
 
 # Colocando sua aplicação online com Heroku

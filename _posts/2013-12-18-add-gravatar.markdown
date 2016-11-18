@@ -1,7 +1,9 @@
 ---
-layout: default
+layout: page
 title: Adicione imagens de perfil com Gravatar
 permalink: gravatar
+previous-link: devise
+next-link: design-html-css
 ---
 
 # Adicione imagens de perfil com Gravatar
@@ -12,7 +14,7 @@ permalink: gravatar
 
 Você precisa ter um email registrado no Gravatar para que esse tutorial funcione. Se você não tem, você pode se registrar em [gravatar.com](http://en.gravatar.com/).
 
-## *1.* Adicione a gem Gravtastic 
+## *1.* Adicione a gem Gravtastic
 
 Abre sua gemfile e abaixo da gem `devise` adicione
 
@@ -60,4 +62,3 @@ adicione
 {% endhighlight %}
 
 Agora abra a aplicação no seu browser e faça login com um email associado com o Gravatar. Você deve poder ver seu Gravatar. see your Gravatar.
- 
