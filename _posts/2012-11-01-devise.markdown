@@ -38,8 +38,7 @@ rails g devise:install
 {% endhighlight %}
 
 
-## *3.*Configure Devise
-## *3.*Configurando Devise
+## *3.*Configurando o Devise
 
 Certifique-se que você tenha definido uma opção de url padrão nos seus arquivos de ambiente. Abra `config/environments/development.rb` e adicione esta linha:
 {% highlight ruby %}
@@ -71,7 +70,6 @@ Abra `app/views/ideas/show.html.erb` e remova a linha que diz:
 
 Faça o mesmo em `app/views/comments/show.html.erb`. Estas linhas não são mais necessárias agora que colocamos o _notice_ no arquivo `app/views/layouts/application.html.erb`.
 
-## *4.*Setup the User model
 ## *4.*Configure o modelo de Usuário
 
 Nós utilizaremos um script gerador para criar o modelo User.
@@ -80,7 +78,7 @@ Nós utilizaremos um script gerador para criar o modelo User.
    rake db:migrate
 {% endhighlight %}
 
-**Treinador:** Explicar o que é o modelo de usuários que foi criado. O que são esses campos?
+**Treinadores:** Explicar o que é o modelo de usuários que foi criado. O que são esses campos?
 
 ## *5.*Crie o seu primeiro usuário
 
@@ -121,17 +119,4 @@ depois de `protect_from_forgery with: :exception`.
 
 Abra o seu navegador e tente realizar login e logout.
 
-**Coach:** Talk about the `user_signed_in?` and `current_user` helpers. Why are they useful?
-**Treinador:** Fale sobre os _helpers_ `user_signed_in?` e `current_user`. Por que eles são úteis?
-
-## O que vem agora?
-
-* Add extra fields to the User model
-* Add relationships between users and ideas
-* Restrict users to only be able to edit their own ideas and delete their own comments
-* Expand to use roles or permissions (use one of the popular authorization gem like CanCan)
-
-* Adicione campos extras no modelo User
-* Adicione relacionamentos entre usuários e ideias
-* Permitir que usuários editem somente as suas próprias ideias e delete seus próprios comentários
-* Expandir as regras de usuários ou permissões (utilizando uma das gems mais populares de autorização, como o CanCan).
+**Treinadores:** Fale sobre os _helpers_ `user_signed_in?` e `current_user`. Por que eles são úteis?

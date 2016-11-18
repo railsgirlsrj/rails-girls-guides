@@ -15,8 +15,6 @@ Siga as instruções referentes ao seu sistema operacional. Se você encontrar a
 * [Instalação para OS X](#instalao-para-os-x)
 * [Instalação para Windows](#instalao-para-windows)
 * [Instalação para Linux](#instalao-para-linux)
-* [Máquina virtual](#mquina-virtual)
-* [Usando um serviço de nuvem](#usando-um-servio-de-nuvem)
 
 <hr />
 
@@ -306,7 +304,7 @@ rails new myapp
 
 Para este evento, recomendamos o editor de textos Sublime Text.
 
-* [Baixe e instale o Sublime Text] http://www.sublimetext.com/2)
+* [Baixe e instale o Sublime Text](http://www.sublimetext.com/2)
 
 
 ### *3.* Atualize seu navegador!
@@ -314,48 +312,3 @@ Para este evento, recomendamos o editor de textos Sublime Text.
 Abra o site [whatbrowser.org](http://whatbrowser.org) e atualize seu navegador caso você não esteja utilizando a versão mais recente.
 
 Agora você deve ter uma instalação para desenvolver em Ruby on Rails funcionando na sua máquina! Parabéns! :)
-
-<hr />
-
-## Máquina Virtual
-
-Ao invés de instalar todas as ferramentas na sua máquina, você pode preparar um ambiente de desenvolvimento em uma Máquina Virtual. Verifique todos os detalhes [aqui]({% post_url 2014-03-24-alternative-dev-environment %}).
-
-<hr />
-
-## Usando um serviço de nuvem
-
-Ao invés de instalar o Ruby on Rails e o editor de textos no seu computador, você poderá utilizar um serviço na web para desenvolvimento. Tudo o que você precisa é um navegador e uma conexão de internet. Este guia explica como começar com o [nitrous.io](https://nitrous.io). Se você está usando um serviço diferente, ele talvez utilize termos diferentes mas o processo costuma ser bastante similar.
-
-### *1.* Update your browser
-
-Se você usa o Internet Explorer, nós recomendamos que você instale o [Firefox](mozilla.org/firefox) or [Google Chrome](google.com/chrome).
-
-Abra o site [whatbrowser.org](http://whatbrowser.org) e atualize seu navegador caso você não esteja utilizando a versão mais recente.
-
-### *2.* Crie uma conta
-
-Visite [https://nitrous.io](https://nitrous.io/) e cadastre-se.
-
-### *3.* Crie um projeto Ruby on Rails
-* Faça o login na sua conta do Nitrous
-* Será solicitado que você crie uma workstation - escolha a modalidade free.
-* **Crie um projeto:** escolha Ruby on Rails nos modelos - todo o resto pode permanecer como está, mas você pode mudar o nome do projeto se você quiser.
-* Leva um tempinho até que o seu projeto esteja pronto.
-
-### *4.* Encontre e reinicie seu projeto
-* Se você acabou de criar seu projeto, você provavelmente pode pular esses passos - eles são importantes caso você faça seu login no Nitrous novamente mais tarde.
-* Se você ainda não usou sua workstation ou projetos durante algum tempo, eles podem ter sido desativados por inatividade. Se você se logar no Nitrous e for informada(o) de que sua workstation foi desativada, reinicie utilizando o botão 'Start Workstation'.
-* Você pode encontrar seus projetos no Nitrous indo ao dashboard através do menu que encontra-se no topo.
-* Escolha seu projeto na lista - se foi desligado, inicie utilizando o botão com o símbolo de liga/desliga.
-* Quando seu projeto estiver ativo e em execução, escolha 'IDE' para começar a escrever código.
-
-### *5.* Escrevendo código no seu projeto
-* À esquerda, você encontrará um navegador de arquivos onde você poderá navegar através de diretórios e arquivos do projeto.
-* No meio, você encontrará o editor onde você pode modificar seus arquivos.
-* Na parte de baixo, você encontrará o terminal onde você pode executar comandos.
-* Tudo o que você precisa está bem ali na janela do seu navegador - você não precisa iniciar um editor de textos tampouco uma janela de terminal em outro local.
-* Se você está seguindo um guia ou tutorial, utilize os comandos para Linux mesmo se você estiver em um computador com Windows - seu sistema operacional não interfere nisso pois todos os comandos que você digitar no terminal do seu projeto serão executados na máquina onde está localizado seu projeto na nuvem e esta máquina utiliza Linux.
-* Se um guia ou tutorial pedir que você inicie o servidor Rails com o comando 'rails server' ou 'rails s', acrescente o trecho '-b 0.0.0.0' ao comando tornando-o 'rails server -b 0.0.0.0'.
-* Se um guia ou tutorial pedir que você aponte seu navegador para algo como http://localhost:3000, vá para o menu ‘Preview’ e escolha ‘Port 3000 - HTTP’.
-* Se, por exemplo, for pedido que você abra a URL http://localhost:3000/posts, abra a visualização (preview) através do menu e acrescente ‘/posts’ manualmente à URL que foi aberta.
