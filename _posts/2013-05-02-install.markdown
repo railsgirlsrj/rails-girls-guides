@@ -304,7 +304,7 @@ rails new myapp
 
 Para este evento, recomendamos o editor de textos Sublime Text.
 
-* [Baixe e instale o Sublime Text] (http://www.sublimetext.com/2)
+* [Baixe e instale o Sublime Text](http://www.sublimetext.com/2)
 
 
 ### *3.* Atualize seu navegador!
