@@ -1,12 +1,12 @@
 ---
 layout: default
-title: Add design to your App with HTML and CSS
+title: Design com HTML and CSS
 permalink: design-html-css
 ---
 
 1.Design your header
 
-+ put the following code to the bottom of `app/assets/stylesheets/application.css`:
++ Coloque o seguinte código no fim do arquivo `app/assets/stylesheets/application.css`:
 
     ```
     .navbar {
@@ -15,13 +15,11 @@ permalink: design-html-css
     }
     ```
 
-  Now refresh the page and check the changes. You can try change the
-    color or font of the header. You can check the color reference
-    from [http://color.uisdc.com/](http://color.uisdc.com/).
+  Agora recarregue a página e verifique as mudanças. Você pode tentar mudar a cor ou a fonte do topo (header). Você pode checar a referência de cores dessse site: [http://color.uisdc.com/](http://color.uisdc.com/).
 
     **Coach: ** talk about the property `display`, inline and block element.
 
-+ Then put these lines at the bottom：
++ Agora coloque essas linhas no final:
 
     ```
     .navbar a.brand { font-size: 18px; }
@@ -32,31 +30,31 @@ permalink: design-html-css
     }
     ```
 
-    **Coach: ** explain the 4 states of a link
+    **Treinador(a): ** explique os 4 estados de um link
 
 
-2.Design your table
+2. Faça sua tabela
 
- + We simply use the twitter [Bootstrap](http://getbootstrap.com/) to
-   polish our table. Find this line from
-   app/views/ideas/index.html.erb and replace:
+ + Nós vamos usar o [Bootstrap](http://getbootstrap.com/) para
+   Melhorar nossa tabela. Ache nessa linha no arquivo
+   `app/views/ideas/index.html.erb` e troque: 
 
    `<table>`
 
-   with
+   por
 
    `<table class="table">`
 
- + Modify size of the picture using the following lines
+ + Modifique o tamanho da imagem usando as seguintes linhas:
 
      ```
      <%= image_tag(idea.picture_url, :width => 600) if idea.picture.present? %>
      ```
 
-     try to change the width and see what's gonna happen
+     tente mudar a largura e veja o que vai acontecer
 
 
- + add the following lines to the bottom of file app/assets/stylesheets/ideas.css.scss:
+ + adicione as seguintes linhas no final do arquivo `app/assets/stylesheets/ideas.css.scss`:
 
   ```
   .container a:hover {
@@ -67,14 +65,14 @@ permalink: design-html-css
   ```
 
 
- + try add some background style with property `background-image`,
-   reference to
-   [http://subtlepatterns.com/](http://subtlepatterns.com/) for some patterns.
+ + tente usar a propriedade `background-image` para colocar um background,
+   veja
+   [http://subtlepatterns.com/](http://subtlepatterns.com/) para alguns padrões.
 
 
-3.add style to footer
+3. Adicione algum estilo ao footer
 
-+ add the lines to bottom of  app/assets/stylesheets/application.css:
++ adicione as seguintes linhas no fim do arquivo `app/assets/stylesheets/application.css`:
 
     ```
     footer {
@@ -83,15 +81,15 @@ permalink: design-html-css
     }
     ```
 
-    try put more things into `footer`, then adjust it's position.
+    tente colocar mais coisas no`footer`, então ajuste sua posição.
 
-4.add style to button
+4. Coloque algum estilo no botão
 
-  + open
+  + Abra
     [http://localhost:3000/ideas/new](http://localhost:3000/ideas/new)
-    and find the `Create Idea` button.
+    e procure o botão `Criar Idéia`.
 
-   add these lines to app/assets/stylesheets/ideas.css.scss
+    adicione essas linhas ao `app/assets/stylesheets/ideas.css.scss`
 
    ```
    .container input[type="submit"] {
@@ -103,5 +101,5 @@ permalink: design-html-css
     }
    ```
 
-   **Coach** explain how to use `border` in css, try modify the style
-     of button like round the corner, add shadow or color etc.
+   **Treinador(a)** Explique como usar `border` em css, tente modificar o estilo do botão para arrendondá-lo,
+   adicione sombra ou cor.
