@@ -5639,6 +5639,10 @@ a.thumbnail:focus {
           border-radius: 3px;
 }
 
+.label-danger {
+  background-color: #d9534f;
+}
+
 .badge {
   padding-right: 9px;
   padding-left: 9px;

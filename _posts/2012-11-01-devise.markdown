@@ -1,7 +1,9 @@
 ---
-layout: default
-title: Adding Authentication with Devise
+layout: page
+title: Adicionando Autenticação com Devise
 permalink: devise
+previous-link: thumbnails
+next-link: gravatar
 ---
 
 # Adicionando Autenticação com Devise
@@ -133,4 +135,3 @@ Abra o seu navegador e tente realizar login e logout.
 * Adicione relacionamentos entre usuários e ideias
 * Permitir que usuários editem somente as suas próprias ideias e delete seus próprios comentários
 * Expandir as regras de usuários ou permissões (utilizando uma das gems mais populares de autorização, como o CanCan).
-

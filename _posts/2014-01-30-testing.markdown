@@ -1,7 +1,8 @@
 ---
-layout: default
+layout: page
 title: É melhor verificar seu app, antes que você o quebre
 permalink: testing-rspec
+previous-link: design-html-css
 ---
 
 # Teste sua aplicação com RSpec
