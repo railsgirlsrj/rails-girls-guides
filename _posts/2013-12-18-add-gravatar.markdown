@@ -61,4 +61,4 @@ adicione
 <%= image_tag current_user.gravatar_url %>
 {% endhighlight %}
 
-Agora abra a aplicação no seu browser e faça login com um email associado com o Gravatar. Você deve poder ver seu Gravatar. see your Gravatar.
+Agora abra a aplicação no seu browser e faça login com um email associado com o Gravatar. Você deve poder ver seu Gravatar.
